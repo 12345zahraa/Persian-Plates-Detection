@@ -1,4 +1,7 @@
-# 🚗 سامانه هوشمند تشخیص پلاک خودرو (YOLO11)
+# Persian-Plates-Detection
+AI-based Persian car plate and digit recognition using YOLO11
+
+# 🚗 Persian Car Plate & Digits Detection using YOLO11
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" alt="Python">
@@ -8,22 +11,33 @@
 
 ---
 
-### 🖼️ خروجی نهایی مدل (Detection Result)
-<div align="center">
-  <img src="result.png" width="800">
-</div>
+![نتایج تشخیص پلاک](result.png)
 
-<div dir="rtl" style="background-color: #f0f9ff; padding: 15px; border-radius: 10px; color: #0077b6; border: 1px solid #0077b6;">
-🔹 <b>معرفی پروژه:</b> این سامانه با استفاده از معماری پیشرفته YOLO11 طراحی شده تا پلاک‌های ایرانی را در شرایط نوری مختلف با دقت بسیار بالا تشخیص دهد.
-</div>
+### معرفی پروژه
+این پروژه یک سیستم هوشمند برای تشخیص پلاک خودروهای ایرانی و استخراج نویسه‌های آن (اعداد و حروف) است. با استفاده از معماری پیشرفته **YOLO11**، این مدل قادر است در شرایط نوری مختلف و زوایای متفاوت، پلاک را با دقت بسیار بالا شناسایی کند.
 
 ---
 
-### 📂 لیست فایل‌های مهم
-* **best.pt**: فایل نهایی وزن‌های مدل.
-* **result.png**: تصویر نمونه از نتایج تشخیص پلاک.
+## 🚀 ویژگی‌های کلیدی (Key Features)
+- ✅ **تشخیص پلاک:** مکان‌یابی دقیق مستطیل پلاک.
+- ✅ **بازخوانی نویسه‌ها:** تشخیص تکی تمام اعداد و حروف فارسی پلاک.
+- ✅ **سرعت بالا:** بهینه‌شده برای اجرا روی GPU.
 
 ---
-<div align="center">
-  <b>توسعه داده شده توسط زهرا ملایی</b>
-</div>
+
+## 📂 ساختار فایل‌ها (File Structure)
+- `best.pt`: فایل نهایی وزن‌های مدل آموزش‌دیده (۵.۳ مگابایت).
+- `result.png`: تصویر نمونه از خروجی تشخیص پلاک.
+- `README.md`: توضیحات و راهنمای پروژه.
+
+---
+
+## 🛠 نحوه استفاده (Usage)
+```python
+from ultralytics import YOLO
+
+# بارگذاری مدل آموزش‌دیده
+model = YOLO('best.pt')
+
+# پیش‌بینی روی عکس جدید
+results = model.predict(source='your_image.jpg', save=True)
