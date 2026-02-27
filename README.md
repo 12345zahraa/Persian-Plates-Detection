@@ -17,40 +17,54 @@
 
 ---
 
+## 🖼 نمونه خروجی و نتایج (Visual Results)
+در تصویر زیر، عملکرد مدل در شناسایی صحیح پلاک‌ها (Object Detection) در دسته‌ای از تصاویر تست مشاهده می‌شود:
+
+<p align="center">
+  <img src="results.jpg" width="850" alt="YOLO11 Persian Plate Detection" style="border-radius: 10px;">
+  <br>
+  <em>شکل ۱: خروجی مدل روی تصاویر اعتبارسنجی (Validation Batch)</em>
+</p>
+
+---
+
 ## 🚀 ویژگی‌های کلیدی (Key Features)
 - ✅ **تشخیص پلاک (Object Detection):** مکان‌یابی دقیق مستطیل پلاک.
-- ✅ **بازخوانی نویسه‌ها (OCR/Digit Recognition):** تشخیص تکی تمام اعداد و حروف فارسی پلاک.
+- ✅ **بازخوانی نویسه‌ها (OCR):** آمادگی بالا برای تشخیص اعداد و حروف فارسی.
 - ✅ **سرعت بالا:** بهینه‌شده برای اجرا روی پردازنده‌های گرافیکی (GPU).
 - ✅ **دقت عالی:** آموزش دیده بر روی دیتاست تخصصی پلاک‌های ایرانی.
 
 ---
 
 ## 📊 نتایج آموزش (Training Results)
-مدل بر روی دو کلاس (Plate & Digits) آموزش دیده است. نتایج ماتریس درهم‌ریختگی و نمودارهای دقت به شرح زیر است:
+مدل با دقت بسیار بالا بر روی کلاس‌های مورد نظر همگرا شده است:
 
-| Metric | Value |
-| :--- | :--- |
-| **mAP50** | ~0.99 (99%) |
-| **Precision** | Very High |
-| **Recall** | Stable |
+| Metric | Value | Status |
+| :--- | :--- | :---: |
+| **mAP50** | ~0.99 (99%) | 🎯 |
+| **Precision** | Very High | ✅ |
+| **Recall** | Stable | ✅ |
 
 ---
 
 ## 📂 ساختار فایل‌ها (File Structure)
-- `persian-plates-detection-yolo11.ipynb`: نوت‌بوک کامل آموزش و تست در محیط کگل.
+- `persian-plates-detection-yolo11.ipynb`: نوت‌بوک کامل آموزش و تست.
 - `best.pt`: فایل نهایی وزن‌های مدل آموزش‌دیده.
 - `README.md`: توضیحات و راهنمای پروژه.
 
 ---
 
 ## 🛠 نحوه استفاده (Usage)
-برای اجرای مدل روی عکس‌های خودتان، ابتدا کتابخانه `ultralytics` را نصب کرده و سپس از کد زیر استفاده کنید:
+برای اجرای مدل، ابتدا کتابخانه `ultralytics` را نصب کرده و سپس از کد زیر استفاده کنید:
 
 ```python
 from ultralytics import YOLO
 
-# بارگذاری مدل آموزش‌دیده
+# 1. بارگذاری مدل آموزش‌دیده
 model = YOLO('best.pt')
 
-# پیش‌بینی روی عکس جدید
-results = model.predict(source='your_image.jpg', save=True)
+# 2. پیش‌بینی روی عکس جدید
+results = model.predict(source='your_image.jpg', save=True, conf=0.5)
+
+# 3. نمایش نتایج
+results[0].show()
