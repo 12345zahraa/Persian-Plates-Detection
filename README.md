@@ -15,7 +15,7 @@ AI-based Persian car plate and digit recognition using YOLO11
 
 ---
 
-<div dir="rtl">
+<div dir="rtl" align="right">
 
 # 🚗 تشخیص پلاک و نویسه‌های ایرانی با YOLO11
 
