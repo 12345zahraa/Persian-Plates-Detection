@@ -9,39 +9,21 @@
 ---
 
 ## 📘 معرفی پروژه (Project Overview)
-این پروژه یک سیستم هوشمند برای **تشخیص پلاک خودروهای ایرانی** و استخراج نویسه‌های آن است. با استفاده از معماری **YOLO11**، این مدل پلاک‌ها را در شرایط نوری مختلف با دقت بسیار بالا شناسایی می‌کند.
-
-<div style="background-color: #f0f9ff; padding: 15px; border-radius: 10px; color: #0077b6;">
-🔹 <b>هدف:</b> تبدیل تصاویر خودرو به داده‌های متنی پلاک با دقت ۹۹٪.
-</div>
+این پروژه یک سیستم هوشمند برای **تشخیص پلاک خودروهای ایرانی** است که با استفاده از الگوریتم **YOLO11** توسعه یافته است.
 
 ---
 
-## 🖼 خروجی و نتایج مدل (Inference Results)
-در تصویر زیر، پیش‌بینی‌های مدل روی تصاویر بخش Validation را مشاهده می‌کنید. مدل با دقت بالا کادر پلاک‌ها را شناسایی کرده است:
-
+## 🖼 خروجی مدل (Detection Result)
 <p align="center">
-  <img src="image_0a645c.jpg" width="100%" style="max-width: 850px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <br>
-  <em>شکل ۱: نمونه شناسایی پلاک‌ها در دسته‌های مختلف (Validation Batch Labels)</em>
+  <img src="image_0a645c.jpg" width="100%">
 </p>
 
 ---
 
-## 🚀 ویژگی‌های کلیدی (Key Features)
-- ✅ **Object Detection:** مکان‌یابی دقیق مستطیل پلاک.
-- ✅ **OCR Ready:** تشخیص تکی تمام اعداد و حروف فارسی پلاک.
-- ✅ **High Speed:** بهینه‌شده برای اجرا روی پردازنده‌های گرافیکی (GPU).
-- ✅ **Robust:** عملکرد پایدار در زوایای مختلف و فواصل متفاوت.
-
----
-
-## 📊 آمار آموزش (Training Stats)
-| Metric | Value | Status |
-| :--- | :--- | :---: |
-| **mAP50** | ~0.99 (99%) | 🎯 |
-| **Precision** | Very High | ✅ |
-| **Recall** | Stable | ✅ |
+## 🚀 ویژگی‌های کلیدی
+- ✅ **تشخیص پلاک (Object Detection):** مکان‌یابی دقیق مستطیل پلاک.
+- ✅ **سرعت بالا:** بهینه‌شده برای اجرا روی GPU.
+- ✅ **دقت عالی:** آموزش دیده بر روی دیتاست پلاک‌های ایرانی.
 
 ---
 
@@ -49,8 +31,6 @@
 ```python
 from ultralytics import YOLO
 
-# بارگذاری مدل
+# بارگذاری مدل و پیش‌بینی
 model = YOLO('best.pt')
-
-# پیش‌بینی روی عکس جدید
-results = model.predict(source='your_image.jpg', save=True, conf=0.5)
+results = model.predict(source='car.jpg', save=True)
