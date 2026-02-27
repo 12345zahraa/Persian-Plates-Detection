@@ -1,43 +1,31 @@
 # Persian-Plates-Detection
 AI-based Persian car plate and digit recognition using YOLO11
 
-<div align="center" style="margin:0; padding:0; line-height:0;">
-  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" style="margin:0; padding:0;">
-  <img src="https://img.shields.io/badge/YOLO-v11-0077b6?style=for-the-badge" style="margin:0; padding:0;">
-  <img src="https://img.shields.io/badge/Kaggle-GPU_T4-20BEFF?style=for-the-badge&logo=kaggle" style="margin:0; padding:0;">
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/YOLO-v11-0077b6?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Kaggle-GPU_T4-20BEFF?style=for-the-badge&logo=kaggle">
 </div>
 
-<div align="center" style="margin-top:-10px; margin-bottom:-20px; padding:0; line-height:0;">
-  <img src="result.png" width="800" style="display:block; margin:0 auto; padding:0;">
-</div>
+<p align="center">
+  <img src="result.png" width="600">
+</p>
 
-<div dir="rtl" style="margin-top:-10px;">
+## 📘 معرفی پروژه
+این پروژه یک سیستم هوشمند برای **تشخیص پلاک خودروهای ایرانی** و استخراج نویسه‌های آن (اعداد و حروف) است که با مدل **YOLO11** آموزش دیده است.
 
-## 🚗 تشخیص پلاک و نویسه‌های ایرانی با YOLO11
-
-این پروژه یک سیستم هوشمند برای تشخیص پلاک خودروهای ایرانی و استخراج نویسه‌های آن (اعداد و حروف) است.  
-با استفاده از معماری پیشرفته YOLO11، این مدل قادر است در شرایط نوری مختلف، پلاک را با دقت بسیار بالا شناسایی کند.
-
-### 🚀 ویژگی‌های کلیدی
-- ✅ تشخیص پلاک: مکان‌یابی دقیق مستطیل پلاک
-- ✅ بازخوانی نویسه‌ها: تشخیص تمام اعداد و حروف فارسی
-- ✅ سرعت بالا: بهینه‌شده برای اجرا روی GPU (Kaggle T4)
-
-### 📂 ساختار فایل‌ها
-- best.pt: فایل نهایی وزن‌های مدل (۵.۳ مگابایت)
-- result.png: تصویر نمونه از خروجی تشخیص پلاک
-
-</div>
+* ✅ **دقت بالا:** شناسایی دقیق در شرایط نوری مختلف.
+* ✅ **سرعت:** بهینه‌شده برای اجرا روی GPU (Kaggle T4).
+* ✅ **خروجی:** تشخیص همزمان پلاک و تک‌تک اعداد.
 
 ---
 
 ## 🛠 Usage
-
-`python
+```python
 from ultralytics import YOLO
 
-# Load the model
+# بارگذاری مدل
 model = YOLO('best.pt')
 
-# Predict on an image
+# پیش‌بینی روی عکس
 results = model.predict(source='result.png', save=True)
