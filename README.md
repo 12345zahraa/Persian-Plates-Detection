@@ -7,6 +7,10 @@ AI-based Persian car plate and digit recognition using YOLO11
   <img src="https://img.shields.io/badge/Kaggle-GPU_T4-20BEFF?style=for-the-badge&logo=kaggle" alt="Kaggle">
 </div>
 
+<div align="center">
+  <img src="result.png" width="600" style="display:block; margin:0 auto;">
+</div>
+
 ---
 
 <div dir="rtl">
@@ -20,9 +24,6 @@ AI-based Persian car plate and digit recognition using YOLO11
 - ✅ **تشخیص پلاک:** مکان‌یابی دقیق مستطیل پلاک.
 - ✅ **بازخوانی نویسه‌ها:** تشخیص تکی تمام اعداد و حروف فارسی پلاک.
 - ✅ **سرعت بالا:** بهینه‌شده برای اجرا روی GPU (Kaggle T4).
-
-### 📊 نتایج آموزش
-مدل بر روی پلاک و نویسه‌ها آموزش دیده و به دقت **mAP50: 99%** دست یافته است.
 
 ### 📂 ساختار فایل‌ها
 - `best.pt`: فایل نهایی وزن‌های مدل (۵.۳ مگابایت).
