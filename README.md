@@ -7,27 +7,22 @@ AI-based Persian car plate and digit recognition using YOLO11
   <img src="https://img.shields.io/badge/Kaggle-GPU_T4-20BEFF?style=for-the-badge&logo=kaggle">
 </div>
 
+---
+
 <div dir="rtl">
 
 ## 📘 معرفی پروژه
-این پروژه یک سیستم هوشمند برای تشخیص پلاک خودروهای ایرانی و استخراج نویسه‌های آن (اعداد و حروف) است که با استفاده از معماری YOLO11 پیاده‌سازی شده است.
+این پروژه یک سیستم هوشمند برای تشخیص پلاک خودروهای ایرانی و استخراج نویسه‌های آن (اعداد و حروف) است که با استفاده از معماری پیشرفته **YOLO11** پیاده‌سازی شده است.
 
 ### 🚀 ویژگی‌های کلیدی
-* ✅ **تشخیص پلاک:** مکان‌یابی دقیق مستطیل پلاک
-* ✅ **بازخوانی نویسه‌ها:** تشخیص تمام اعداد و حروف فارسی
-* ✅ **سرعت بالا:** بهینه‌شده برای اجرا روی GPU (Kaggle T4)
+- ✅ **تشخیص پلاک:** مکان‌یابی دقیق مستطیل پلاک
+- ✅ **بازخوانی نویسه‌ها:** تشخیص تمام اعداد و حروف فارسی
+- ✅ **سرعت بالا:** بهینه‌شده برای اجرا روی GPU (Kaggle T4)
 
 ### 📂 ساختار فایل‌ها
-* `best.pt`: فایل نهایی وزن‌های مدل (۵.۳ مگابایت)
-* `result.png`: تصویر نمونه از خروجی تشخیص پلاک
+- `best.pt`: فایل نهایی وزن‌های مدل (۵.۳ مگابایت)
+- `result.png`: تصویر نمونه از خروجی تشخیص پلاک
 
----
-
-### 📊 خروجی نهایی (Result)
-</div>
-
-<div align="center">
-  <img src="result.png" width="850">
 </div>
 
 ---
@@ -36,5 +31,8 @@ AI-based Persian car plate and digit recognition using YOLO11
 ```python
 from ultralytics import YOLO
 
+# Load the trained model
 model = YOLO('best.pt')
+
+# Predict on a new image
 results = model.predict(source='result.png', save=True)
