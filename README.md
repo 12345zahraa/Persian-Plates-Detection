@@ -7,8 +7,6 @@
   <img src="https://img.shields.io/badge/YOLO-v11-0077b6?style=for-the-badge" alt="YOLO11">
   <img src="https://img.shields.io/badge/Kaggle-GPU_T4-20BEFF?style=for-the-badge&logo=kaggle" alt="Kaggle">
 </div>
-
----
 # تشخیص پلاک خودروهای ایرانی
 ![نتایج تشخیص پلاک](result.png)
 ### معرفی پروژه
