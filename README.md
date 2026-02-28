@@ -33,8 +33,8 @@ AI-based Persian car plate and digit recognition using YOLO11
 ## 📊 دیتاست‌های مورد استفاده (Datasets)
 این پروژه با ترکیب دو دیتاست جامع از پلتفرم **Kaggle** آموزش دیده است تا بیشترین دقت را در تشخیص پلاک‌های ملی داشته باشد:
 
-* 📂 **[Car Plate Detection - YOLOv11](https://www.kaggle.com/datasets/zahramollaey/car-plate-detection-yolov11):** دیتاست تخصصی برای آموزش مدل YOLOv11 جهت مکان‌یابی دقیق مستطیل پلاک.
-* 📂 **[Persian Car Plates Digits Detection - YOLO](https://www.kaggle.com/datasets/zahramollaey/persian-car-plates-digits-detection-yolo):** دیتاست بهینه‌شده برای شناسایی و تفکیک نویسه‌ها (اعداد و حروف) پلاک‌های ایرانی.
+* 📂 **[Car Plate Detection - YOLOv11](https://www.kaggle.com/code/zahramollaey/persian-plates-detection-yolov11):** دیتاست تخصصی برای آموزش مدل YOLOv11 جهت مکان‌یابی دقیق مستطیل پلاک.
+* 📂 **[Persian Car Plates Digits Detection - YOLO](https://www.kaggle.com/code/zahramollaey/persian-plates-detection-yolov11):** دیتاست بهینه‌شده برای شناسایی و تفکیک نویسه‌ها (اعداد و حروف) پلاک‌های ایرانی.
 
 > [!TIP]
 > هر دو دیتاست با فرمت استاندارد **YOLO** برچسب‌گذاری شده‌اند.
